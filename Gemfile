@@ -6,7 +6,10 @@ gem 'rails', '3.2.14'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-
+group :production, :staging do
+      gem 'pg'
+      gem 'rails_12factor'
+    end
 #group :production do 
  #gem 'pg'
  #gem 'rails_12factor'
